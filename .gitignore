@@ -33,6 +33,8 @@
 /config/deploy
 
 
+/.idea/*
+
 *.swo
 *.swp
 
