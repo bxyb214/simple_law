@@ -1,0 +1,348 @@
+#content
+  #about.container
+    .row
+      .col-md-3.sidebar
+        = render :partial => 'about/sidebar'
+      .col-md-9
+        h2.title-divider
+          span
+            | About
+            span.de-em
+              | Us
+          small
+            | What & who makes us tick!
+        .row.margin-top-large
+          .col-md-7
+            p.lead
+              | Dolus hendrerit pecus ullamcorper. Luctus neo vulputate zelus.
+            p
+              | Ad blandit humo quae. Ex feugiat luptatum mauris molior pecus probo turpis. Euismod gilvus in incassum lobortis natu patria saepius suscipere vulputate.
+            p
+              | Caecus cui hendrerit jumentum pala sudo usitas vulpes. Esca in interdico jumentum odio praesent ut vulpes wisi. Comis dolus occuro saepius te vulpes. Adipiscing bene esse quae sudo.
+          .col-md-5
+            #list-accordion.panel-group.panel-group-list-style
+              .panel.panel-default
+                .panel-heading
+                  a.panel-title.collapsed[data-toggle="collapse" data-parent="#list-accordion" href="#collapseOne"]
+                    | Our Mission
+                #collapseOne.collapse
+                  .panel-body
+                    | Abico pertineo refoveo similis voco. Decet defui dolor ibidem laoreet lenis nunc qui saepius wisi.
+              .panel.panel-default
+                .panel-heading
+                  a.panel-title.collapsed[data-toggle="collapse" data-parent="#list-accordion" href="#collapseTwo"]
+                    | Our Process
+                #collapseTwo.collapse
+                  .panel-body
+                    | Causa probo turpis. Augue ille in magna nimis patria sit. Diam esse gilvus hendrerit ibidem neo nisl quae qui ulciscor.
+              .panel.panel-default
+                .panel-heading
+                  a.panel-title.collapsed[data-toggle="collapse" data-parent="#list-accordion" href="#collapseThree"]
+                    | How We Work
+                #collapseThree.collapse
+                  .panel-body
+                    | Jumentum venio vulpes. Consequat duis suscipere. Dignissim eligo humo letalis nibh quibus quis.
+              .panel.panel-default
+                .panel-heading
+                  a.panel-title.collapsed[data-toggle="collapse" data-parent="#list-accordion" href="#collapseFour"]
+                    | What We Do
+                #collapseFour.collapse
+                  .panel-body
+                    | Adipiscing augue diam et mauris. Cogo erat ex exputo sagaciter tamen ulciscor.
+        .title-divider.margin-top-large
+          h3
+            span
+              | Our
+              span.de-em
+                | Values
+        .row
+          .col-md-6
+            ul.fa-ul.list-lg
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Exerci Luptatum Pecus Vereor
+                |  Lobortis nunc persto uxor vulputate. Amet distineo ideo proprius quibus quis saepius vereor.
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Enim Jus Quidem Voco
+                |  Dolor euismod nisl nulla pneum saepius ut vereor verto zelus.
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Brevitas Defui Usitas Ut
+                |  Abluo decet fere ludus tum wisi.
+          .col-md-6
+            ul.fa-ul.list-lg
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Letalis Magna Pneum Ut
+                |  Abluo comis eligo praemitto secundum suscipit.
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Meus Nobis Persto Sit
+                |  Macto os quis. Eros esca exerci incassum interdico iusto similis tego utinam vero.
+              li
+                i.fa-li.fa.fa-check.primary-colour
+                h4
+                  |  Distineo Letalis Turpis Usitas
+                |  Abico adipiscing causa fere importunus neo refoveo virtus.
+        h3.title-divider.margin-top-large
+          span
+            | Company
+            span.de-em
+              | History
+        .timeline.timeline-left
+          .timeline-marker
+          .timeline-item.timeline-item-first.animated.fadeIn.de-02
+            .timeline-item-date
+              | Feb 2011
+            h5.timeline-item-title
+              |  Company founders meet for first time
+            p.timeline-item-description
+              | Causa eum nimis qui quia. Euismod feugiat lenis molior occuro typicus utinam volutpat.
+          .timeline-item.highlight.animated.fadeIn.de-04
+            .timeline-item-date
+              | April 2011
+            h5.timeline-item-title
+              |  The company was born
+            p.timeline-item-description
+              | Aliquip antehabeo augue esse importunus iriure saepius tum utinam. Conventio dolore dolus fere huic letalis meus neo os sino.
+          .timeline-item.animated.fadeIn.de-06
+            .timeline-item-date
+              | Sept 2011
+            h5.timeline-item-title
+              |  The company lands first major contract
+            p.timeline-item-description
+              | Abigo accumsan dolore mauris nobis. Caecus cogo comis commoveo et exputo humo quadrum ratis vicis.
+          .timeline-item.timeline-item-last.animated.fadeIn.de-08
+            .timeline-item-date
+              | Dec 2014
+            h5.timeline-item-title
+              |  Company sold for $1 million
+            p.timeline-item-description
+              | Brevitas consectetuer elit jus nisl patria praesent quis tamen. Damnum ex ideo magna minim qui quibus quidne rusticus suscipit.
+          .timeline-marker.timeline-marker-bottom
+        .title-divider.margin-top-large
+          h3
+            span
+              | Our
+              span.de-em
+                | Team
+            small
+              | Our Team Of Stars
+        .team.team-grid
+          .row[data-toggle="isotope-grid" data-isotope-options="{\"layoutMode\": \"fitRows\", \"itemSelector\": \".grid-item\"}"]
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Jimi's profile"]
+                  = image_tag "team/jimi.jpg", alt:"Jimi", class:'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Jimi's profile"]
+                    | Jimi
+                p.role
+                  | Founder & developer
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Adele's profile"]
+                  = image_tag "team/adele.jpg", alt: "Adele", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Adele's profile"]
+                    | Adele
+                p.role
+                  | Founder & designer
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Bono's profile"]
+                  = image_tag "team/bono.jpg", alt: "Bono", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Bono's profile"]
+                    | Bono
+                p.role
+                  | The Tech Guy
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Robert's profile"]
+                  = image_tag "team/robert.jpg", alt: "Robert", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Robert's profile"]
+                    | Robert
+                p.role
+                  | Junior designer
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Steve's profile"]
+                  = image_tag "team/steve.jpg", alt: "steve", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Steve's profile"]
+                    | Steve
+                p.role
+                  | Sales Manager
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Jolie's profile"]
+                  = image_tag "team/jolie.jpg", alt: "jolie", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Jolie's profile"]
+                    | Jolie
+                p.role
+                  | Marketing Expert
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Obama's profile"]
+                  = image_tag "team/obama.jpg", alt: "obama", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Obama's profile"]
+                    | Obama
+                p.role
+                  | Project Manager
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+            .col-xs-6.col-sm-4.col-md-3.grid-item
+              .team-member
+                a[href="team-member.htm" title="View Kate's profile"]
+                  = image_tag "team/kate.jpg", alt: "kate", class: 'img-thumbnail'
+                h5.name
+                  a[href="team-member.htm" title="View Kate's profile"]
+                    | Kate
+                p.role
+                  | Project Manager
+                .social-media-branding.social-media-branding-xs
+                  a.social-link.branding-twitter[href="#"]
+                    i.fa.fa-twitter-square
+                  a.social-link.branding-facebook[href="#"]
+                    i.fa.fa-facebook-square
+                  a.social-link.branding-linkedin[href="#"]
+                    i.fa.fa-linkedin-square
+                  a.social-link.branding-google-plus[href="#"]
+                    i.fa.fa-google-plus-square
+        .title-divider.margin-top-large
+          h3
+            span
+              | Our
+              span.de-em
+                | Customers
+            small
+              | 1000s of Happy Clients
+        <div class="customers-carousel" data-toggle="owl-carousel" data-owl-carousel-settings='{"items": 4, "lazyLoad":true, "navigation":true, "scrollPerPage":true}'>
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-1.png" alt="Item 1 image"]
+            h6
+              |  Customer 1
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-2.png" alt="Item 2 image"]
+            h6
+              |  Customer 2
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-3.png" alt="Item 3 image"]
+            h6
+              |  Customer 3
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-4.png" alt="Item 4 image"]
+            h6
+              |  Customer 4
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-5.png" alt="Item 5 image"]
+            h6
+              |  Customer 5
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-6.png" alt="Item 6 image"]
+            h6
+              |  Customer 6
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-7.png" alt="Item 7 image"]
+            h6
+              |  Customer 7
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-8.png" alt="Item 8 image"]
+            h6
+              |  Customer 8
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-9.png" alt="Item 9 image"]
+            h6
+              |  Customer 9
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-10.png" alt="Item 10 image"]
+            h6
+              |  Customer 10
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-11.png" alt="Item 11 image"]
+            h6
+              |  Customer 11
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-12.png" alt="Item 12 image"]
+            h6
+              |  Customer 12
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-13.png" alt="Item 13 image"]
+            h6
+              |  Customer 13
+          a[href="#"]
+            img.lazyOwl.img-responsive.underlay[data-src="/assets/customers/customer-14.png" alt="Item 14 image"]
+            h6
+              |  Customer 14
+        </div>

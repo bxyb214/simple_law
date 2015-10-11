@@ -1,0 +1,28 @@
+= form_for resource, as: resource_name, url: session_path(resource_name), :html => {id: "signup-form", class: "form-login form-wrapper form-narrow"} do |f|
+  h3.title-divider
+    span
+      | 登录
+    h5
+      |  帐号信息
+      small.pull-right
+        | 未注册？
+        = link_to new_user_registration_path
+          | 点击注册
+  .form-group
+    = f.label :email, class: "sr-only", for: "login-email-page"
+      | 邮箱
+    = f.email_field :email, name:"email", autofocus:true, class:"form-control email", placeholder: "邮箱", id: "login-email-page"
+  .form-group
+    = f.label :password, class: "sr-only", for: "login-password-page"
+      | 密码
+    = f.password_field :password, name:"password", class:"form-control password", autocomplete: "off", placeholder: "密码", id: "login-password-page"
+
+  - if devise_mapping.rememberable?
+    .checkbox
+      label
+        = f.check_box :remember_me, type:"checkbox"
+        |  一个月内免登录
+  = link_to "忘记密码？", new_password_path(resource_name), class:"forget"
+
+  = f.submit "登录", class: "btn btn-primary"
+    | 登录

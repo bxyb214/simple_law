@@ -1,0 +1,277 @@
+a.sr-only[href="#content"]
+  | Skip to content
+#navigation.wrapper
+  .navbar-static-top
+    .header-hidden
+      .header-hidden-inner.container
+        .row
+          .col-sm-4.col-md-4
+            h3
+              |  关于我们
+            p
+              | Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!
+            = link_to about_path, class:"btn btn-sm btn-primary"
+              | 获取更多
+          .col-sm-4.col-md-4
+            h3
+              |  联系我们
+            address
+              p
+                abbr[title="Phone"]
+                  i.fa.fa-phone
+                |  400-1234-5678
+              p
+                abbr[title="Email"]
+                  i.fa.fa-envelope
+                |  bxyb214@gmail.com
+              p
+                abbr[title="Address"]
+                  i.fa.fa-home
+                |  北京市海淀区中关村软件园28号楼环宇大厦2F
+          .col-sm-4.col-md-4
+            .colour-switcher
+              h3
+                |  敬请期待
+              p
+                | Android/IOS 客户端下载
+    .header-upper
+      .header-upper-inner.container
+        .row
+          .col-xs-8.col-xs-push-4
+            #header-hidden-link
+              a.show-hide[href="#" title="Click me you'll get a surprise" data-toggle="show-hide" data-target=".header-hidden" data-callback="searchFormFocus"]
+                i
+                | Open
+            a.phone
+              i.fa.fa-phone
+                span
+                  |400-1234-5678
+
+          .col-xs-4.col-xs-pull-8
+            .btn-group.user-menu
+              - if current_user != nil
+                .welcome
+                  | 欢迎您！
+                  == current_user.username
+                = link_to "", class: "btn btn-link"
+                  | 个人中心
+                = link_to destroy_user_session_path,  :method => :delete, class:"btn btn-link signout"
+                  | 登出
+              - else
+                = link_to "注册", new_user_registration_path, class:"btn btn-link signup"
+                = link_to "登录", new_user_session_path, class:"btn btn-link login"
+                /a.btn.btn-link.login-mobile[href="#"]
+                /  i.fa.fa-user
+                /a.btn.btn-link.signup[href="#signup-modal" data-toggle="modal"]
+                  | 注册
+                /a.btn.btn-link.login[href="#login-modal" data-toggle="modal"]
+                  | 登录
+                /.btn-group.language-menu
+                /  a.btn.btn-link.dropdown-toggle[href="#zh-CN" data-toggle="dropdown"]
+                /    span.flag-icon.flag-icon-cn
+                /  ul.dropdown-menu.dropdown-menu-mini.dropdown-menu-primary
+                /    li
+                /      a.lang-cn
+                /        span.flag-icon.flag-icon-us
+                /        |  English
+
+              a.search-form-tigger[href="#search" data-toggle="search-form" data-target=".header-search"]
+                i.fa.fa-search.fa-search
+
+
+    .header-search
+      form.search-form.container
+        input.form-control.search[type="text" name="search" value="" placeholder="搜索文章"]
+        button.btn.btn-link[type="button"]
+          span.sr-only
+            | Search
+          i.fa.fa-search.fa-flip-horizontal.search-icon
+        button.btn.btn-link.close-btn[type="button" data-toggle="search-form-close"]
+          span.sr-only
+            | Close
+          i.fa.fa-times.search-icon
+    .header[data-toggle="clingify"]
+      .header-inner.container
+        .navbar
+          .pull-left
+            = link_to root_path, title:"首页", class:"navbar-brand"
+              h1
+                span
+                  | 宜法网
+                span.beta
+                  | beta
+                /span.subtitle
+                /  | SimpleLaw
+            .slogan
+              | 专注创业法律服务
+          /a.search-form-tigger[href="#search" data-toggle="search-form" data-target=".header-search"]
+          /  i.fa.fa-search.fa-flip-horizontal.search-icon
+          = render :partial => 'layouts/cart_icon'
+          a.navbar-btn[href="#top" data-toggle="jpanel-menu" data-target=".navbar-collapse" data-direction="right"]
+            i.fa.fa-bars
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li
+                = link_to home_index_path
+                  | 主页
+              li.dropdown.dropdown-full
+                a#megamenu-drop.dropdown-toggle.menu-item[href="#" data-toggle="dropdown" data-hover="dropdown"]
+                  | 法务产品 +
+                ul.dropdown-menu.mega-menu[role="menu" aria-labelledby="megamenu-drop"]
+                  li.dropdown-header[role="presentation"]
+                    | 创业服务产品
+                  li[role="presentation"]
+                    ul.row.list-unstyled[role="menu"]
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-building.fa-2x
+                            .category
+                              | 我要开公司
+                        a.menu-item[role="menuitem" href=product_path(1) tabindex="-1"]
+                          strong
+                            | 快公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合伙
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 工商变更
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-magic.fa-2x
+                            .category
+                              | 我要财税记账
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快记账
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 一般纳税人记账
+
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-group.fa-2x
+                            .category
+                              | 我要律师服务
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 问律师
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合同
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合伙
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 创业法律顾问
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 股权期权法律顾问
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-building.fa-2x
+                            .category
+                              | 我要开公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合伙
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 工商变更
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-building.fa-2x
+                            .category
+                              | 我要开公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合伙
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 工商变更
+                      li.col-md-2[role="presentation"]
+                        span
+                          i.fa.fa-building.fa-2x
+                            .category
+                              | 我要开公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快公司
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 快合伙
+                        a.menu-item[role="menuitem" href="features.htm" tabindex="-1"]
+                          strong
+                            | 工商变更
+
+              li.dropdown
+                a#pages-drop.dropdown-toggle[href="#" data-toggle="dropdown" data-hover="dropdown"]
+                  | 知识库 +
+                ul.dropdown-menu[role="menu" aria-labelledby="pages-drop"]
+                  - knowledge_categories.each do |parent_category|
+                    li.dropdown.dropdown-submenu
+                      a#about-drop.dropdown-toggle[href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="false"]
+                        = parent_category.name
+                      ul.dropdown-menu[role="menu" aria-labelledby="about-drop"]
+                        - child_categories(parent_category).each do |category|
+                          li[role="presentation"]
+                            a.menu-item[role="menuitem" href=categoried_knowledges_path(category_id: category.slug) tabindex="-1"]
+                              = category.name
+              li.dropdown
+                a#blog-drop.dropdown-toggle[href="blog.htm" data-toggle="dropdown" data-hover="dropdown"]
+                  | 帮助 +
+                ul.dropdown-menu[role="menu" aria-labelledby="blog-drop"]
+                  li[role="presentation"]
+                    a.menu-item[role="menuitem" href="blog.htm" tabindex="-1"]
+                      | Blog List Right Sidebar
+
+                  li[role="presentation"]
+                    a.menu-item[role="menuitem" href="blog-leftbar.htm" tabindex="-1"]
+                      | Blog List Left Sidebar
+                  li[role="presentation"]
+                    a.menu-item[role="menuitem" href="blog-timeline.htm" tabindex="-1"]
+                      | Blog List Timeline
+
+                  li[role="presentation"]
+                    a.menu-item[role="menuitem" href="blog-grid.htm" tabindex="-1"]
+                      | Blog List Grid
+                      i.new-tag
+
+
+              li.dropdown
+                a#more-drop.dropdown-toggle[href="about" data-toggle="dropdown" data-hover="dropdown"]
+                  | 关于我们 +
+                ul.dropdown-menu.dropdown-menu-right[role="menu" aria-labelledby="more-drop"]
+                  li[role="presentation"]
+                    = link_to about_path+'?tab=us', role:"menuitem", tabindex:"-1"
+                      | 关于我们
+                  li[role="presentation"]
+                    = link_to about_path+'?tab=team', role: "menuitem", tabindex: "-1"
+                      | 关于团队
+                  li[role="presentation"]
+                    = link_to about_path+'?tab=contract', role: "menuitem", tabindex: "-1"
+                      | 联系我们
+
+    - if flash[:error] || flash[:alert] || flash[:notice] || flash[:warning]
+      .alert {style = 'display: none'}
+        = flash[:error] || flash[:alert] || flash[:notice] || flash[:warning]
+
+
+javascript:
+  //similar to http://briancray.com/2009/05/06/twitter-style-alert-jquery-cs-php/
+  $(function () {
+    var alert = $('.alert');
+    if (alert.length > 0) {
+      alert.show().animate({height: alert.outerHeight()}, 200);
+      window.setTimeout(function() {
+        alert.slideUp();
+      }, 5000);
+    }
+  });

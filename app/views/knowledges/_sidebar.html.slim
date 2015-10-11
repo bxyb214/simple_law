@@ -1,0 +1,11 @@
+.section-menu
+  ul.nav.nav-list
+    li.nav-header
+      = @parent_category.name
+    - @categories.each do |category|
+      li class=('active' if category.id == @category.id)
+        a href=categoried_knowledges_path(category_id: category.slug)
+          = category.name
+          small
+            | 副标题
+          i.fa.fa-angle-right

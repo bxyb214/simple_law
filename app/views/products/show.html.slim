@@ -1,0 +1,51 @@
+= content_for :meta do
+  meta description= @product.name
+
+- @page_title = @product.name
+
+#content
+  .container
+    h2.title-divider
+      span
+        = @category.name
+    .row
+      .col-md-7
+
+      .col-md-5.product-info
+        .title
+          h3
+            = @product.name
+          span
+            | 创始人之间的股权分配协议
+        .price
+          span
+            | ￥690元/份
+          em.red
+            | 限时优惠 原价980元
+
+        .sub-title
+          | 注： 5千字以内（以Word自带字数统计工具为准），视为一个订单；每超过5千字的部分视为一个新订单。（另，如需开具发票，需与您的服务律师签订委托协议）
+
+        a.btn.btn-danger
+          | 选择该服务
+        a.btn.btn-primary
+          | 联系我们
+
+    h3.title-divider
+      span
+        | 产品详情
+    .row
+      .product-content
+        = markdown_format @product.description
+
+        = social_share_button_tag("#{@product.name} - #{@product.title}", :popup => "true")
+        #qrcode style="width:100px; height:100px; margin:15px 0;"
+
+javascript:
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width: 100,
+    height: 100
+  });
+
+  qrcode.makeCode(window.location.href);
+

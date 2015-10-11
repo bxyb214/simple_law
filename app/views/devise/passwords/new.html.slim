@@ -1,0 +1,15 @@
+#content
+  .container
+    = form_for resource, as: resource_name, url: password_path(resource_name), :html => {id: "forget-password-form", method: "post", class: "form-wrapper"} do |f|
+      = devise_error_messages!
+      h3.title-divider
+        span
+          | 请输入您的电子邮箱地址或用户名，您会收到一封包含创建新密码链接的电子邮件
+      .form-narrow
+        .form-group
+          = f.label :email, class: "sr-only", for: "forget-password-email"
+            | 电子邮箱
+          = f.email_field :email, autofocus: true, class: "form-control email", placeholder: "邮箱", id: "forget-password-email"
+
+        = f.submit "获取新密码", class: "btn btn-primary"
+          | 获取新密码

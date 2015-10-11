@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.0'
 # gem 'unicorn'
 
 # Bootstrap
-gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Font Awesome
 gem 'font-awesome-rails', '~> 4.4.0.0'
@@ -48,6 +48,8 @@ gem 'slim', '~> 3.0.6'
 
 # Markdown
 gem 'redcarpet', '~> 3.3.3'
+# Code highlight
+gem 'rouge', '~> 1.10.1'
 
 # paginator
 gem 'kaminari', '~> 0.16.3'
@@ -69,9 +71,12 @@ gem 'http_accept_language', '~> 2.0.5'
 gem 'i18n', '~> 0.7.0'
 
 gem 'meta-tags', '~> 2.0.0'
-gem 'social-share-button', '~> 0.1.8'
+gem 'social-share-button'
 gem 'impressionist', '~> 1.5.1'
+gem 'flag-icon-sass', '~> 0.1'
 
+# authentication
+gem 'devise', '~> 3.5.2'
 
 
 group :development do
@@ -90,6 +95,7 @@ group :development do
 
   # Deploy tool
   gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-passenger', '~> 0.1.1'
   gem 'capistrano-rvm', '~> 0.1.2'
   gem 'capistrano-bundler', '~> 1.1.4'
   gem 'capistrano-rails', '~> 1.1.3'

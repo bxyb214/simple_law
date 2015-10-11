@@ -1,0 +1,76 @@
+footer#footer
+  .container
+    .row
+      .col-md-3.col
+        .block.contact-block
+          h3
+            |  联系我们
+          address
+
+          ul.fa-ul
+            li
+              abbr[title="Phone"]
+                i.fa.fa-li.fa-phone
+              |  400-1234-5678
+            li
+              abbr[title="Email"]
+                i.fa.fa-li.fa-envelope
+              |  bxyb214@gmail.com
+            li
+              abbr[title="Address"]
+                i.fa.fa-li.fa-home
+              |  北京市海淀区中关村软件园28号楼2F
+      .col-md-5.col
+        .block
+          h3
+            |  关于我们
+          p
+            | 我们是宜法网，一个互联网服务品牌，一个挑战传统法律服务的革新者。依托于宜法网这个平台，我们为芸芸中小微创业者提供高品质的创业法律服务。
+      .col-md-4.col
+        .block.newsletter
+          h3
+            |  服务支持
+          h3.phone
+            | 400-8646-001
+          p
+            | 周一至周五： 9:00-21:00
+
+    .row
+      #toplink
+        a.top-link[href="#top" title="Back to top"]
+          | 回到顶端
+          i.fa.fa-chevron-up
+      .subfooter
+        .col-md-6
+          p
+            | 京ICP备14022439号-1
+            |  | Copyright © 2013-2015 杭州唐擎技术有限责任公司
+        .col-md-6
+          ul.list-inline.footer-menu
+            li
+              a[href="#"]
+                | 隐私条款
+            li
+              a[href=about_path]
+                | 联系我们
+  .hidden-elements.jpanel-menu-exclude
+    #signup-modal.modal.fade[tabindex="-1" role="dialog" aria-hidden="true"]
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close[type="button" data-dismiss="modal" aria-hidden="true"]
+              | &times;
+            h4.modal-title
+              |  注册
+          .modal-body
+            = render :partial => 'devise/registrations/signupForm'
+    #login-modal.modal.fade[tabindex="-1" role="dialog" aria-hidden="true"]
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close[type="button" data-dismiss="modal" aria-hidden="true"]
+              | &times;
+            h4.modal-title
+              |  登录
+          .modal-body
+            = render :partial => 'devise/sessions/signinForm'

@@ -1,0 +1,47 @@
+= content_for :meta do
+  meta description= @knowledge.title
+
+- @page_title = @knowledge.title
+
+#content
+  .container
+    h2.title-divider
+      span
+        | 知识库 -
+        sapn
+          a.de-em[href=categoried_knowledges_path(category_id: @category.slug)]
+            = @category.name
+    .row.blog-post
+      .col-md-1.date-md
+        .date-wrapper
+          span.date-m
+            = "#{@knowledge.updated_at.month}月"
+          span.date-d
+            = @knowledge.updated_at.day
+        p.text-muted
+          = @knowledge.author
+      .col-md-11.media-body
+        .sections
+          a.tag[href=categoried_knowledges_path(category_id: @category.slug)]
+            = @category.name
+        h3.title.media-heading
+          = @knowledge.title
+        ul.list-inline.meta.text-muted
+          li
+            i.fa.fa-calendar
+            = "星期#{@knowledge.updated_at.wday} #{@knowledge.updated_at.year} #{@knowledge.updated_at.month}月 #{@knowledge.updated_at.day}日"
+          li
+            = @knowledge.author
+        .blog-content
+          = markdown_format @knowledge.body
+
+          = social_share_button_tag(@knowledge.title, :popup => "true")
+          #qrcode style="width:100px; height:100px; margin:15px 0;"
+
+javascript:
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width: 100,
+    height: 100
+  });
+
+  qrcode.makeCode(window.location.href);

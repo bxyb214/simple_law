@@ -1,0 +1,45 @@
+#content
+  .container
+    .row
+      .col-md-3.sidebar
+        = render :partial => 'about/sidebar'
+      .col-md-9
+        h2.title-divider
+          span
+            | Contact
+            span.de-em
+              | Us
+          small
+            | Ways To Get In Touch
+        .row
+          .col-md-6
+            form#contact-form[action="#" role="form"]
+              .form-group
+                label.sr-only[for="contact-name"]
+                  | Name
+                input#contact-name.form-control[type="text" placeholder="Name"]
+              .form-group
+                label.sr-only[for="contact-email"]
+                  | Email
+                input#contact-email.form-control[type="email" placeholder="Email"]
+              .form-group
+                label.sr-only[for="contact-message"]
+                  | Message
+                textarea#contact-message.form-control[rows="12" placeholder="Message"]
+              input.btn.btn-primary[type="button" value="Send Message"]
+          .col-md-6
+            p
+              abbr[title="Phone"]
+                i.fa.fa-phone
+              |  019223 8092344
+            p
+              abbr[title="Email"]
+                i.fa.fa-envelope
+              |  info@appstrap.me
+            p
+              abbr[title="Address"]
+                i.fa.fa-home
+              |  Sunshine House, Sunville. SUN12 8LU.
+            p
+              a[href="https://maps.google.co.uk/maps?q=London&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;gl=uk&amp;t=m&amp;ll=51.510238,-0.127029&amp;spn=0.042735,0.102654&amp;z=12&amp;"]
+                = image_tag "misc/map.png", alt: "Location map", class: 'img-thumbnail'

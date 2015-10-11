@@ -1,4 +1,56 @@
 Rails.application.routes.draw do
+
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
+  get 'products/index'
+
+  devise_for :users
+
+  get 'home/index'
+
+  root 'home#index'
+
+  # About
+  get 'about' => 'about#index'
+
+
+  resources :knowledges, only: [:index, :show, :update] do
+    collection do
+      get :trashed
+    end
+
+    member do
+      delete :trash
+      patch :restore
+
+    end
+  end
+
+  resources :knowledges, only: [:index, :show, :new, :create, :edit, :update] do
+    collection do
+      get 'categoried/:category_id', to: 'knowledges#index', as: :categoried
+      get 'search'
+      get 'feed'
+    end
+
+    member do
+      delete :trash
+    end
+  end
+
+
+  Rails.application.routes.draw do
+    resources :products, only: [:index, :show]
+    resource :cart, only: [:show]
+    resources :order_items, only: [:create, :update, :destroy]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

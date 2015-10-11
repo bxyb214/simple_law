@@ -1,0 +1,147 @@
+= render :partial => 'layouts/highlighted'
+
+#content
+  .container
+    .block.features
+      h2.title-divider
+        span
+          | 创业的智慧
+          span.de-em
+            | 从点滴积累开始
+      .row
+        .feature.col-sm-6.col-md-3
+          a[href="features.htm"]
+            = image_tag "features/feature-1.png", class: "img-responsive", alt: "Feature 1"
+          h3.title
+            a[href="features.htm"]
+              | 快公司
+              span.de-em
+                | 注册公司仅需318元
+          p
+            | 创业路上，需要一个懂你的律师
+        .feature.col-sm-6.col-md-3
+          a[href="features.htm"]
+            = image_tag "features/feature-2.png", class:"img-responsive", alt:"Feature 2"
+          h3.title
+            a[href="features.htm"]
+              | 快公司
+              span.de-em
+                | 注册公司仅需318元
+          p
+            | 注：暂只支持北京城内6区及深圳各区，其它地区正在努力开通中
+        .feature.col-sm-6.col-md-3
+          a[href="features.htm"]
+            = image_tag "features/feature-3.png", class: "img-responsive", alt: "Feature 3"
+          h3.title
+            a[href="features.htm"]
+              | 快公司
+              span.de-em
+                | 注册公司仅需318元
+          p
+            | 致力于为创业及小微公司快速低价提供整体法律风险诊断及解决方案（目前有一个月付、季度付、半年付、一年付四种付款方式可选）
+        .feature.col-sm-6.col-md-3
+          a[href="features.htm"]
+            = image_tag "features/feature-4.png", class: "img-responsive", alt: "Feature 4"
+          h3.title
+            a[href="features.htm"]
+              | 快公司
+              span.de-em
+                | 注册公司仅需318元
+          p
+            | 注：已开通北京、上海、广州、深圳、杭州、南京、厦门、成都、苏州等地区，各地工本费会有不同
+    .block
+      h2.title-divider
+        span
+          | 也许是目前最好的
+          span.de-em
+            | 创业法律服务
+      .row.price-stack
+        .col-md-3
+          span
+            i.fa.fa-heart-o.fa-lg
+          h3
+            | 极致，超一流的关怀
+        .col-md-3
+          span
+            i.fa.fa-history.fa-lg
+          h3
+            | 快，还要更快
+        .col-md-3
+          span
+            i.fa.fa-suitcase.fa-lg
+          h3
+            | 专业，让你感同身受
+        .col-md-3
+          span
+            i.fa.fa-money.fa-lg
+          h3
+            | 诱人，不只是价格
+
+    .block
+      h2.title-divider
+        span
+          | 迈出创业第一步
+          span.de-em
+            | 你所必需的服务
+      ul.nav.nav-tabs[data-js="quicksand" data-quicksand-trigger="li > a" data-quicksand-target=".customers"]
+        li.active
+          a[href="#" data-quicksand-fid="type-web"]
+            | 公司
+        li
+          a[href="#" data-quicksand-fid="type-web"]
+            | 财税
+        li
+          a[href="#" data-quicksand-fid="type-design"]
+            | 知产
+        li
+          a[href="#" data-quicksand-fid="type-media"]
+            | 法律
+        li
+          a[href="#" data-quicksand-fid="type-media"]
+            | 社保
+        li
+          a[href="#" data-quicksand-fid="type-media"]
+            | 人事
+      ul.row.list-unstyled.block.customers
+        li.customer.type-web[data-quicksand-id="id-1" data-quicksand-tid="type-web"]
+          | 测试测试
+    .block.testimonials.margin-top-large
+      h2.title-divider
+        span
+          | 评价
+          span.de-em
+            | 我们的声音
+      .row
+        .col-md-4
+          blockquote
+            p
+              | “感觉就两个字：省心！让我能把更多的精力放在产品和团队上，帮助很大！”
+            small
+              = image_tag "team/jimi.jpg", class:"img-circle", alt:"Jimi Bloggs"
+              |  朱紫辉
+              span.spacer
+                | /
+              a[href="#"]
+                | “酷玩实验室”创始人
+        .col-md-4
+          blockquote
+            p
+              | "超赞，服务到位，帮我们解决了很多创业公司方面的问题，谢谢~"
+            small
+              = image_tag "team/steve.jpg", class: "img-circle", alt: "Steve Bloggs"
+              |  乔龙
+              span.spacer
+                | /
+              a[href="#"]
+                | 茄子拍”产品经理&联合创始人
+        .col-md-4
+          blockquote
+            p
+              | "在公司刚创立时给予了我们很大的专业帮助，资料核实详细认真，办事也很快。“
+            small
+              = image_tag "team/adele.jpg", class: "img-circle", alt: "Adele Bloggs"
+              |  Eric Tu
+              span.spacer
+                | /
+              a[href="#"]
+                | “厨临门”创始人兼CEO

@@ -1,0 +1,9 @@
+zh-CN:
+  devise:
+    failure:
+      user:
+        invalid: 您输入的账号/密码无效，请重新输入
+    sessions:
+      user:
+
+        signed_out: 注销成功！

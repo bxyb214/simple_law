@@ -1,0 +1,23 @@
+.section-menu
+  ul.nav.nav-list
+    li.nav-header
+      | About Us
+    li class=('active' if params[:tab] == 'us')
+      = link_to tab:'us'
+        | 关于我们
+        small
+          | 公司简介
+        i.fa.fa-angle-right
+    li class=('active' if params[:tab] == 'team')
+      = link_to tab:'team'
+        |  关于团队
+        small
+          | 团队介绍
+        i.fa.fa-angle-right
+    li class=('active' if params[:tab] == 'contract')
+      = link_to tab:'contract'
+        |  联系我们
+        small
+          | 联系方式
+        i.fa.fa-angle-right
+

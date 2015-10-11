@@ -1,0 +1,41 @@
+.row.blog-post
+  .col-md-1.date-md
+    .date-wrapper
+      span.date-m
+        = "#{knowledge.updated_at.month}月"
+      span.date-d
+        = knowledge.updated_at.day
+    p.text-muted
+      = knowledge.author
+  .col-md-11
+    /.tags
+    /  a.tag[href="#"]
+    /    | jobs
+    /  |  /
+    /  a.type[href="#"]
+    /    | feature
+    h4.title.media-heading
+      a[href=knowledge_path(knowledge.id)]
+        = knowledge.title
+    ul.list-inline.meta.text-muted
+      li
+        i.fa.fa-calendar
+          = "星期#{knowledge.updated_at.wday} #{knowledge.updated_at.year} #{knowledge.updated_at.month}月 #{knowledge.updated_at.day}日"
+      li
+        i.fa.fa-user
+        = knowledge.author
+    p
+      = markdown_format knowledge.abstract
+    ul.list-inline.links
+      li
+        a.btn.btn-default.btn-xs[href=knowledge_path(knowledge.id)]
+          i.fa.fa-arrow-circle-right
+          |  点击阅读
+      li
+        a.btn.btn-default.btn-xs
+          i.fa.fa-comment
+          |  14条
+      li
+        a.btn.btn-default.btn-xs
+          i.fa.fa-heart
+          |  22条
