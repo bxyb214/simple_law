@@ -12,7 +12,6 @@
 #= require qrcode.min
 #= require script
 #= require_tree ./locales
-#= require_tree ./plugins
 
 
 
