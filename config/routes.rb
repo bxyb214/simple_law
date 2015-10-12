@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     resources :products, only: [:index, :show]
     resource :cart, only: [:show]
-    resources :order_items, only: [:create, :update, :destroy]
+    resources :order_items, only: [:new, :create, :update, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

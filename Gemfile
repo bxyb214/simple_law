@@ -79,6 +79,10 @@ gem 'flag-icon-sass', '~> 0.1'
 gem 'devise', '~> 3.5.2'
 
 
+group :production do
+  gem 'mysql2', '~> 0.4.1'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
