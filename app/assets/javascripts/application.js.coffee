@@ -1,7 +1,7 @@
-#= require bootstrap
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require bootstrap
 #= require jquery.autosize
 #= require jquery.validate
 #= require jquery.timeago
@@ -17,6 +17,8 @@
 
 $ ->
   console.log "对源代码感兴趣？更多关于本站技术栈信息请参考: https://github.com/bxyb214/simplelaw"
+
+$('.dropdown-toggle').dropdown();
 
 $(document).on 'page:update', ->
   $('[data-behaviors~=autosize]').autosize()
