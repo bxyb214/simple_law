@@ -4,8 +4,8 @@ source 'https://ruby.taobao.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+gem 'mysql2', '~> 0.3.18'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -79,11 +79,11 @@ gem 'flag-icon-sass', '~> 0.1'
 gem 'devise', '~> 3.5.2'
 
 
-group :production do
-  gem 'mysql2', '~> 0.4.1'
-end
-
 group :development do
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
