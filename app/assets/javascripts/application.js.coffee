@@ -11,14 +11,12 @@
 #= require social-share-button
 #= require qrcode.min
 #= require script
-#= require turbolinks
 #= require_tree ./locales
 
 
 
 $ ->
   console.log "对源代码感兴趣？更多关于本站技术栈信息请参考: https://github.com/bxyb214/simplelaw"
-
 
 $(document).on 'page:update', ->
   $('[data-behaviors~=autosize]').autosize()

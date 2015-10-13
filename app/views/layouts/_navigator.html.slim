@@ -277,4 +277,6 @@ javascript:
   });
 
 javascript:
-  $('.dropdown-toggle').dropdownHover(options);
+  $(document).on('ready page:load', function () {
+    $('.dropdown-toggle').dropdownHover(options);
+  });
