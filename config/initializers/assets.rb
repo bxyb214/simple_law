@@ -9,4 +9,4 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js.coffee, application.css.scss, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( plugins/bootstrap.js locales/zh-CN.js )
+Rails.application.config.assets.precompile += %w( plugins/bootstrap.js plugins/bootstrap.css locales/zh-CN.js )
