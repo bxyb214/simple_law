@@ -14,7 +14,8 @@
  *= require font-awesome
  *= require social-share-button
  */
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "flag-icon-sass";
 @import "theme-style";
 @import "bootstrapValidator";
