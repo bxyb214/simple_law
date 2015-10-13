@@ -5,6 +5,7 @@
 #= require jquery.validate
 #= require jquery.timeago
 #= require bootstrapValidator
+#= require bootstrap-hover-dropdown
 #= require nprogress
 #= require jquery-migrate-1.2.1.min
 #= require social-share-button

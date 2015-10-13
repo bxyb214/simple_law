@@ -72,8 +72,8 @@ $(document).on 'ready page:load', ->
   # Plugin: Bootstrap Hover Dropdown
   # @see: https://github.com/CWSpear/bootstrap-hover-dropdown
   # ----------------------------------------------------------------
-  if jQuery('[data-hover="dropdown"]').length > 0
-    jQuery().themeLoadPlugin [ 'bootstrap-hover-dropdown.js' ], [], null, 'append'
+#  if jQuery('[data-hover="dropdown"]').length > 0
+#    jQuery().themeLoadPlugin [ 'bootstrap-hover-dropdown.js' ], [], null, 'append'
   # ----------------------------------------------------------------
   # Bootstrap tooltip
   # @see: http://getbootstrap.com/javascript/#tooltips
