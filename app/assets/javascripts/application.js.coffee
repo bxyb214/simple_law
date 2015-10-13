@@ -4,7 +4,6 @@
 #= require jquery.validate
 #= require jquery.timeago
 #= require jquery-migrate-1.2.1.min
-#= require plugins/bootstrap
 #= require bootstrapValidator
 #= require nprogress
 #= require social-share-button
